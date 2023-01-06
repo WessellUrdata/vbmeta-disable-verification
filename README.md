@@ -12,6 +12,14 @@ Other than that, I've created this repository to document how patching out verit
 
 An explanation of how the script works can be found [here](https://github.com/WessellUrdata/vbmeta-disable-verification/wiki/Explanation:-How-patching-vbmeta-works).
 
+## Usage
+
+Download the script from [Releases](https://github.com/WessellUrdata/vbmeta-disable-verification/releases).
+
+```bash
+$ python ./bvqc3.py <filename>
+```
+
 ## Credits
 
 Credits to [@libxzr](https://github.com/libxzr) for creating the [original repo](https://github.com/libxzr/vbmeta-disable-verification) and [the blog post about patching vbmeta.img](https://blog.xzr.moe/archives/226/).
