@@ -20,6 +20,12 @@ Download the script from [Releases](https://github.com/WessellUrdata/vbmeta-disa
 $ python ./bvqc3.py <filename>
 ```
 
+Alternatively, if you are on Linux, try:
+
+```bash
+$ ./bvqc3.py <filename>
+```
+
 ## Credits
 
 Credits to [@libxzr](https://github.com/libxzr) for creating the [original repo](https://github.com/libxzr/vbmeta-disable-verification) and [the blog post about patching vbmeta.img](https://blog.xzr.moe/archives/226/).
