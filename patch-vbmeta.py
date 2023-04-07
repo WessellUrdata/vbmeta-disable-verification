@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import sys
 
@@ -8,7 +10,6 @@ AVB_MAGIC_LEN = 4
 # Information about the verification flags
 FLAGS_OFFSET = 123
 FLAGS_TO_SET = b'\x03'
-
 
 if __name__ == "__main__":
 
