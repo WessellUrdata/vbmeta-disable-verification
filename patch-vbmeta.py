@@ -13,9 +13,9 @@ FLAGS_TO_SET = b'\x03'
 
 if __name__ == "__main__":
 
-    # if an argument is not provided
+    # if a correct argument is not provided
     if len(sys.argv) != 2:
-        sys.exit("Usage: python ./" + os.path.basename(__file__) + " <vbmeta-image>")
+        sys.exit(f"Usage: python ./{os.path.basename(__file__)} <vbmeta-image>")
 
     # try reading the file with read/write to make sure it exists
     FILE = sys.argv[1]
@@ -23,14 +23,14 @@ if __name__ == "__main__":
     try:
         fd = os.open(FILE, os.O_RDWR)
     except OSError:
-        sys.exit("Error reading file: " + FILE + ". File not modified. Exiting...")
+        sys.exit(f"Error reading file: {FILE}\nFile not modified. Exiting...")
 
     # making sure it's a vbmeta image by reading the magic bytes at the start of the file
     magic = os.read(fd, AVB_MAGIC_LEN)
 
     if (magic != AVB_MAGIC):
         fd.close()
-        sys.exit("Error: The provided image is not a valid vbmeta image. File not modified. Exiting...")
+        sys.exit("Error: The provided image is not a valid vbmeta image.\nFile not modified. Exiting...")
 
     # set the disable-verity and disable-verification flags at offset 123
     try:
@@ -38,7 +38,7 @@ if __name__ == "__main__":
         os.write(fd, FLAGS_TO_SET)
     except OSError:
         fd.close()
-        sys.exit("Error: Failed when patching the vbmeta image. Exiting...")
+        sys.exit("Error: Failed when patching the vbmeta image.\nExiting...")
 
     # end of program
     os.close(fd)
