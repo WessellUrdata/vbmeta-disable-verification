@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # making sure it's a vbmeta image by reading the magic bytes at the start of the file
     magic = os.read(fd, AVB_MAGIC_LEN)
 
-    if (magic != AVB_MAGIC):
+    if magic != AVB_MAGIC:
         fd.close()
         sys.exit("Error: The provided image is not a valid vbmeta image.\nFile not modified. Exiting...")
 
