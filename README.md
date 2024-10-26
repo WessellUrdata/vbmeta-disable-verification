@@ -17,13 +17,7 @@ An explanation of how the script works can be found [here](https://github.com/We
 Download the script from [Releases](https://github.com/WessellUrdata/vbmeta-disable-verification/releases).
 
 ```bash
-$ python ./bvqc3.py <filename>
-```
-
-Alternatively, if you are on Linux, try:
-
-```bash
-$ ./bvqc3.py <filename>
+$ python patch-vbmeta.py <filename>
 ```
 
 ## Credits
