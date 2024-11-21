@@ -1,4 +1,4 @@
-# <img src="logo.svg" width="48px" height="48px" alt="logo"> vbmeta Patch Script
+# <img src="https://github.com/user-attachments/assets/1e97af3f-c798-4d20-bf99-1554a665d564" width="48px" height="48px" alt="logo"> vbmeta Patch Script
 
 A Python port of https://github.com/libxzr/vbmeta-disable-verification to patch Android vbmeta image file to disable verification flags
 
