@@ -14,7 +14,6 @@ FLAGS_TO_SET = b"\x03"
 
 
 def patch_vbmeta(file):
-
     # try reading the file with read/write to make sure it exists
     try:
         fd = os.open(file, os.O_RDWR)
@@ -44,7 +43,6 @@ def patch_vbmeta(file):
 
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser(
         description="Python script to patch Android vbmeta image file to disable verification flags"
     )
