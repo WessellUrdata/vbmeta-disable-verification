@@ -24,7 +24,7 @@ def patch_vbmeta(file):
     magic = os.read(fd, AVB_MAGIC_LEN)
 
     if magic != AVB_MAGIC:
-        fd.close()
+        os.close(fd)
         sys.exit(
             "Error: The provided image is not a valid vbmeta image.\nFile not modified. Exiting..."
         )
@@ -34,7 +34,7 @@ def patch_vbmeta(file):
         os.lseek(fd, FLAGS_OFFSET, os.SEEK_SET)
         os.write(fd, FLAGS_TO_SET)
     except OSError:
-        fd.close()
+        os.close(fd)
         sys.exit("Error: Failed when patching the vbmeta image.\nExiting...")
 
     # end of program
